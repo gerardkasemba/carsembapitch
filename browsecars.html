@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escrow</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <header class="p-3 mb-3">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                <img src="logo.png" width="100" alt="">
+            </a>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 link-dark">Home</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Shop now</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Ways to pay</a></li>
+            </ul>
+
+            <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 link-dark">Sign in</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">Get estimate</a></li>
+                    <li><a href="#" class="btn btn-sm" style="background-color: #e76f51; color: #fff; border-color: #e76f51;">Sell you car</a></li>
+                </ul>
+                <!-- <input type="search" class="form-control" placeholder="Search..." aria-label="Search"> -->
+            </div>
+
+            <div class="dropdown text-end">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded">
+                </a>
+                <ul class="dropdown-menu text-small shadow-sm" aria-labelledby="dropdownUser1" style="border: 0;">
+                <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                <li><a class="dropdown-item" href="#">Personal Info</a></li>
+                <li><a class="dropdown-item" href="#">Password & Security</a></li>
+                <li><a class="dropdown-item" href="#">Help</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 p-4 col-lg-3 g-2 mb-5 shadow-sm bg-white">
+                <form>
+                    <div class="pb-2 mb-2">
+                        <b class=" text-dark">Filters</b>
+                        <div>
+                            <div class="text-center">
+                                <small class="text-muted"><small class="m-0 p-0">No filters applied</small></small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pb-4 mb-2">
+                        <b class=" text-dark">Location</b>
+                        <select class="form-select form-select-dark mb-2" name="location">
+                            <option value="true">Select location</option>
+                            <option value="Chicago">Chicago</option>
+                            <option value="Dallas">Dallas</option>
+                            <option value="Los Angeles">Los Angeles</option>
+                            <option value="New York">New York</option>
+                            <option value="San Diego">San Diego</option>
+                        </select>
+                    </div>
+                    <div class="pb-4 mb-2">
+                        <b class=" text-dark">Body Type</b>
+                        <div class="overflow-auto" data-simplebar="init" data-simplebar-auto-hide="false" data-simplebar-inverse="true" style="height: 11rem;">
+                            <div class="simplebar-content" style="padding: 0px;">
+                                <div class="form-check form-check-dark">
+                                    <input class="form-check-input" type="checkbox" name="bodyType" id="sedan" value="sedan">
+                                    <label class="form-check-label fs-sm" for="sedan">Sedan</label>
+                                </div>
+                                <div class="form-check form-check-dark">
+                                    <input class="form-check-input" type="checkbox" name="bodyType" id="suv" value="suv">
+                                    <label class="form-check-label fs-sm" for="suv">SUV</label>
+                                </div>
+                                <div class="form-check form-check-dark">
+                                    <input class="form-check-input" type="checkbox" name="bodyType" id="wagon" value="wagon">
+                                    <label class="form-check-label fs-sm" for="wagon">Wagon</label>
+                                </div>
+                                <div class="form-check form-check-dark">
+                                    <input class="form-check-input" type="checkbox" id="crossover" name="bodyType" value="crossover">
+                                    <label class="form-check-label fs-sm" for="crossover">Crossover</label>
+                                </div>
+                                <div class="form-check form-check-dark">
+                                    <input class="form-check-input" type="checkbox" id="coupe" name="bodyType" value="coupe">
+                                    <label class="form-check-label fs-sm" for="coupe">Coupe</label>
+                                </div>
+                                <div class="form-check form-check-dark">
+                                    <input class="form-check-input" type="checkbox" id="pickup" name="bodyType" value="pickup">
+                                    <label class="form-check-label fs-sm" for="pickup">Pickup</label>
+                                </div>
+                                <div class="form-check form-check-dark">
+                                    <input class="form-check-input" type="checkbox" id="sport" name="bodyType" value="sport">
+                                    <label class="form-check-label fs-sm" for="sport">Sport Coupe</label>
+                                </div>
+                                <div class="form-check form-check-dark">
+                                    <input class="form-check-input" type="checkbox" id="compact" name="bodyType" value="compact">
+                                    <label class="form-check-label fs-sm" for="compact">Compact</label>
+                                </div>
+                                <div class="form-check form-check-dark">
+                                    <input class="form-check-input" type="checkbox" id="convertible" name="bodyType" value="convertible">
+                                    <label class="form-check-label fs-sm" for="convertible">Convertible</label>
+                                </div>
+                                <div class="form-check form-check-dark">
+                                    <input class="form-check-input" type="checkbox" id="mpv" name="bodyType" value="mpv">
+                                    <label class="form-check-label fs-sm" for="mpv">Family MPV</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pb-4 mb-2">
+                        <b class="text-dark pt-1">Year</b>
+                        <div class="d-flex align-items-center">
+                            <select class="form-select form-select-dark w-100" name="yearFrom">
+                                <option value="">From</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2011">2011</option>
+                                <option value="2010">2010</option>
+                            </select>
+                            <div class="mx-2">—</div>
+                            <select class="form-select form-select-dark w-100" name="yearTo">
+                                <option value="">To</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2011">2011</option>
+                                <option value="2010">2010</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="pb-4 mb-2">
+                        <b class=" text-dark">Make &amp; Model</b>
+                        <select class="form-select form-select-dark mb-2" name="make">
+                            <option value="">Any make</option>
+                            <option value="Audi">Audi</option>
+                            <option value="Infiniti">Infiniti</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Lexus">Lexus</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Mitsubishi">Mitsubishi</option>
+                            <option value="Mercedes-Benz">Mercedes-Benz</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Opel">Opel</option>
+                            <option value="Renault">Renault</option>
+                            <option value="Toyota">Toyota</option>
+                        </select>
+                        <select class="form-select form-select-dark mb-1" name="model">
+                            <option value="">Any model</option>
+                            <option value="Altima">Altima</option>
+                            <option value="Juke">Juke</option>
+                            <option value="Leaf">Leaf</option>
+                            <option value="Maxima">Maxima</option>
+                            <option value="Micra">Micra</option>
+                            <option value="Murano">Murano</option>
+                            <option value="Note">Note</option>
+                            <option value="Pathfinder">Pathfinder</option>
+                            <option value="Patrol">Patrol</option>
+                        </select>
+                    </div>
+                    <div class="pb-4 mb-2">
+                        <b class=" text-dark">Price</b>
+                        <div class="range-slider range-slider-dark mb-3" data-start-min="25000" data-start-max="65000" data-min="4000" data-max="100000" data-step="1000">
+                            <div class="range-slider-ui noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">slide price range</div>
+                            <div class="d-flex align-items-center">
+                                <div class="w-50 pe-2">
+                                    <input class="form-control form-control-dark range-slider-value-min" type="text" name="priceFrom" value="">
+                                </div>
+                                <div class="text-muted">—</div>
+                                <div class="w-50 ps-2">
+                                    <input class="form-control form-control-dark range-slider-value-max" type="text" name="priceTo" value="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pb-4 mb-2">
+                        <b class="text-dark">Drivetrain</b>
+                        <div class="form-check form-check-dark">
+                            <input class="form-check-input" type="checkbox" id="awd" name="drivetrain" value="awd">
+                            <label class="form-check-label fs-sm" for="awd">AWD/4WD</label>
+                        </div>
+                        <div class="form-check form-check-dark">
+                            <input class="form-check-input" type="checkbox" id="frontWheel" name="drivetrain" value="frontWheel">
+                            <label class="form-check-label fs-sm" for="frontWheel">Front Wheel Drive</label>
+                        </div>
+                        <div class="form-check form-check-dark">
+                            <input class="form-check-input" type="checkbox" id="rearWheel" name="drivetrain" value="rearWheel">
+                            <label class="form-check-label fs-sm" for="rearWheel">Rear Wheel Drive</label>
+                        </div>
+                    </div>
+                    <div class="pb-4 mb-2">
+                        <b class="text-dark">Fuel Type</b>
+                        <div class="form-check form-check-dark">
+                            <input class="form-check-input" type="checkbox" id="diesel" name="fuelType" value="diesel">
+                            <label class="form-check-label fs-sm" for="diesel">Diesel</label>
+                        </div>
+                        <div class="form-check form-check-dark">
+                            <input class="form-check-input" type="checkbox" id="electric" name="fuelType" value="electric">
+                            <label class="form-check-label fs-sm" for="electric">Electric</label>
+                        </div>
+                        <div class="form-check form-check-dark">
+                            <input class="form-check-input" type="checkbox" id="gasoline" name="fuelType" value="gasoline">
+                            <label class="form-check-label fs-sm" for="gasoline">Gasoline</label>
+                        </div>
+                        <div class="form-check form-check-dark">
+                            <input class="form-check-input" type="checkbox" id="hybrid" name="fuelType" value="hybrid">
+                            <label class="form-check-label fs-sm" for="hybrid">Hybrid</label>
+                        </div>
+                        <div class="form-check form-check-dark">
+                            <input class="form-check-input" type="checkbox" id="hydrogen" name="fuelType" value="hydrogen">
+                            <label class="form-check-label fs-sm" for="hydrogen">Hydrogen</label>
+                        </div>
+                        <div class="form-check form-check-dark">
+                            <input class="form-check-input" type="checkbox" id="plugin" name="fuelType" value="plugin">
+                            <label class="form-check-label fs-sm" for="plugin">Plug-in Hybrid</label>
+                        </div>
+                    </div>
+                    <div class="pb-4 mb-1">
+                        <b class=" text-dark">Transmission</b>
+                        <div class="form-check form-check-dark">
+                            <input class="form-check-input" type="checkbox" id="auto" name="transmission" value="auto">
+                            <label class="form-check-label fs-sm" for="auto">Automatic</label>
+                        </div>
+                        <div class="form-check form-check-dark">
+                            <input class="form-check-input" type="checkbox" id="manual" name="transmission" value="manual">
+                            <label class="form-check-label fs-sm" for="manual">Manual</label>
+                        </div>
+                    </div>
+                    <div class="pb-4 mb-2">
+                        <b class="text-dark pt-1">Mileage</b>
+                        <div class="d-flex align-items-center">
+                            <input class="form-control form-control-dark w-100" type="number" min="0" step="500" placeholder="From" name="mileageFrom" value="0">
+                            <div class="mx-2">—</div>
+                            <input class="form-control form-control-dark w-100" type="number" min="0" step="500" placeholder="To" name="mileageTo" value="0">
+                        </div>
+                    </div>
+                    <div class="pb-4 mb-2">
+                        <b class="text-dark">Color</b>
+                        <div class="overflow-auto" data-simplebar="init" data-simplebar-auto-hide="false" data-simplebar-inverse="true" style="height: 11rem;">
+                            <div class="form-check form-check-dark">
+                                <input class="form-check-input" type="checkbox" id="amber" name="exteriorColor" value="amber">
+                                <label class="form-check-label fs-sm" for="amber">Amber</label>
+                            </div>
+                            <div class="form-check form-check-dark">
+                                <input class="form-check-input" type="checkbox" id="azure" name="exteriorColor" value="azure">
+                                <label class="form-check-label fs-sm" for="azure">Azure</label>
+                            </div>
+                            <div class="form-check form-check-dark">
+                                <input class="form-check-input" type="checkbox" id="beige" name="exteriorColor" value="beige">
+                                <label class="form-check-label fs-sm" for="beige">Beige</label>
+                            </div>
+                            <div class="form-check form-check-dark">
+                                <input class="form-check-input" type="checkbox" id="black" name="exteriorColor" value="black">
+                                <label class="form-check-label fs-sm" for="black">Black</label>
+                            </div>
+                            <div class="form-check form-check-dark">
+                                <input class="form-check-input" type="checkbox" id="blue" name="exteriorColor" value="blue">
+                                <label class="form-check-label fs-sm" for="blue">Blue</label>
+                            </div>
+                            <div class="form-check form-check-dark">
+                                <input class="form-check-input" type="checkbox" id="brown" name="exteriorColor" value="brown">
+                                <label class="form-check-label fs-sm" for="brown">Brown</label>
+                            </div>
+                            <div class="form-check form-check-dark">
+                                <input class="form-check-input" type="checkbox" id="camouflage" name="exteriorColor" value="camouflage">
+                                <label class="form-check-label fs-sm" for="camouflage">Camouflage green</label>
+                            </div>
+                            <div class="form-check form-check-dark">
+                                <input class="form-check-input" type="checkbox" id="red" name="exteriorColor" value="red">
+                                <label class="form-check-label fs-sm" for="red">Red</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pb-2" style="font-size: 14px">
+                        <b class="text-dark">Sellers</b>
+                        <div class="form-check form-check-dark">
+                            <input class="form-check-input" type="checkbox" id="dealers" name="sellerType" value="dealer">
+                            <label class="form-check-label fs-sm" for="dealers">Dealers Only</label>
+                        </div>
+                        <div class="form-check form-check-dark">
+                            <input class="form-check-input" type="checkbox" id="private-sellers" name="sellerType" value="seller">
+                            <label class="form-check-label fs-sm" for="private-sellers">Private Sellers Only</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-9 col-lg-9 g-2 p-3">
+                <div class="d-flex align-items-center justify-content-between pb-4 mb-2"><h3 class="text-dark me-3 mb-0">Used cars</h3><div class="text-dark"><i class="bi bi-truck me-2" style="font-size: 30px; position: relative; top: 5px;"></i><span class="align-middle">2 offers</span></div></div>
+                <div class="d-sm-flex align-items-center justify-content-between pb-4 mb-2"><div class="d-flex align-items-center me-sm-4"><label class="fs-sm text-dark me-2 pe-1 text-nowrap" for="sorting1"><i class="bi bi-arrow-down-up mt-n1 me-2"></i>Sort by:</label><select class="form-select form-select-dark form-select-sm me-sm-4" id="sorting1" name="sort"><option value="location" selected="">Location</option><option value="bodyType">Body Type</option><option value="year">Year</option><option value="make">Make</option><option value="model">Model</option><option value="price">Price</option><option value="drivetrain">Model</option><option value="fuelType">Fuel Type</option><option value="transmission">Transmission</option><option value="mileage">Mileage</option><option value="fuelType">Fuel Type</option><option value="color">Color</option></select><select class="form-select form-select-dark form-select-sm me-sm-4" id="sorting2" name="dir"><option value="desc">Descending</option><option value="asc" selected="">Ascending</option></select></div></div>
+           
+                <!-- CARD -->
+                <div class="car-card-hover card card-light card-hover card-horizontal mb-4 shadow-sm bg-white" style="overflow: hidden; border: 0">
+                    <div class="row g-2">
+                        <div class="col-md-5" style="overflow: hidden;">
+                            <div class="tns-carousel-wrapper card-img-top card-img-hover">
+                                <a href="/findcar/62017ac1c019d4ea60246521">
+                                    <img class="img-fluid" src="https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/teaser_720x406x2/dam/pnr/2022/Products/911-Classic/Exterior/_F1A0757_le_03a.jpeg/jcr:content/_F1A0757_le_03a.jpeg" style="width: 100%;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body position-relative">
+                                <h2 class="h5 mb-1"><a class="nav-link-light df_nav text-dark" href="/findcar/62017ac1c019d4ea60246521">Porsche</a></h2>
+                                <div class="text-primary fw-bold mb-1">Est. $199.78/Week</div>
+                                <div class="row g-2"><div class="col-md-6">
+                                    <div class="fs-sm text-dark pb-1" style="font-size: 14px;">$8479.58 Cash down</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="fs-sm text-dark pb-1" style="font-size: 14px;">Price: $79996</div>
+                                </div>
+                            </div>
+                            <div class="border-top border-light mt-3 pt-3">
+                                    <div class="row g-2">
+                                        <div class="col me-sm-1">
+                                            <div class="bg-light rounded text-center w-100 h-100 p-2">
+                                                <i class="fi-dashboard d-block h4 text-dark mb-0 mx-center"></i>
+                                                <span class="bi bi-stopwatch-fill text-dark">&nbsp;&nbsp;11.998k Mi</span>
+                                            </div>
+                                        </div>
+                                        <div class="col me-sm-1">
+                                            <div class="bg-light rounded text-center w-100 h-100 p-2">
+                                                <i class="fi-gearbox d-block h4 text-dark mb-0 mx-center"></i>
+                                                <span class="bi bi-bezier2 text-dark">&nbsp;&nbsp;Manual</span>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="bg-light rounded text-center w-100 h-100 p-2">
+                                                <i class="fi-petrol d-block h4 text-dark mb-0 mx-center"></i>
+                                                <span class="bi bi-bucket-fill text-dark">&nbsp;&nbsp;Gasoline</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-card-hover card card-light card-hover card-horizontal mb-4 shadow-sm bg-white" style="overflow: hidden; border: 0">
+                    <div class="row g-2">
+                        <div class="col-md-5" style="overflow: hidden;">
+                            <div class="tns-carousel-wrapper card-img-top card-img-hover">
+                                <a href="/findcar/62017ac1c019d4ea60246521">
+                                    <img class="img-fluid" src="https://www.topgear.com/sites/default/files/2021/09/PCGB20_0937_fine.jpg?w=892&h=502" style="width: 100%;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body position-relative">
+                                <h2 class="h5 mb-1"><a class="nav-link-light df_nav text-dark" href="/findcar/62017ac1c019d4ea60246521">Porsche</a></h2>
+                                <div class="text-primary fw-bold mb-1">Est. $199.78/Week</div>
+                                <div class="row g-2"><div class="col-md-6">
+                                    <div class="fs-sm text-dark pb-1" style="font-size: 14px;">$8479.58 Cash down</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="fs-sm text-dark pb-1" style="font-size: 14px;">Price: $79996</div>
+                                </div>
+                            </div>
+                            <div class="border-top border-light mt-3 pt-3">
+                                    <div class="row g-2">
+                                        <div class="col me-sm-1">
+                                            <div class="bg-light rounded text-center w-100 h-100 p-2">
+                                                <i class="fi-dashboard d-block h4 text-dark mb-0 mx-center"></i>
+                                                <span class="bi bi-stopwatch-fill text-dark">&nbsp;&nbsp;11.998k Mi</span>
+                                            </div>
+                                        </div>
+                                        <div class="col me-sm-1">
+                                            <div class="bg-light rounded text-center w-100 h-100 p-2">
+                                                <i class="fi-gearbox d-block h4 text-dark mb-0 mx-center"></i>
+                                                <span class="bi bi-bezier2 text-dark">&nbsp;&nbsp;Manual</span>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="bg-light rounded text-center w-100 h-100 p-2">
+                                                <i class="fi-petrol d-block h4 text-dark mb-0 mx-center"></i>
+                                                <span class="bi bi-bucket-fill text-dark">&nbsp;&nbsp;Gasoline</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END CARD -->
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

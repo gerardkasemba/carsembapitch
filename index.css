@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Varela Round', sans-serif;
+    src: url(VarelaRound-Regular.ttf);
+}
+html body{
+    font-family: 'Varela Round', sans-serif;
+    background-color: #f1f2f6;
+    color: #222;
+    font-size: 14px;
+}
+.cs-a{font-size: 14px; text-decoration: none; color: #e76f51}
+.cs-a:hover{color: #d35400; font-weight: 700;}
+
+
+/* ============================================ BUTTONS ============================== */
+.cs-btn:hover{
+    background: rgba(30, 39, 46,0.6);
+}
+.cs-btn {
+    cursor: pointer;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 0;
+    color: #222;
+}
+.cs-btn-primary {
+    margin-right: 10px;
+    background: #e76f51;
+    color: #fff;
+}
+
+/* ========================================== CAR CARD ================================ */
+.car-card-hover:hover {
+    box-shadow: 0 .250rem .250rem rgba(0,0,0,.090)!important;
+    cursor: pointer;
+}
+
+/*=================================== UPLOAD DROPZONE =======================================*/
+.dropzone {
+    border: 4px dotted #a1a1a1;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #a1a1a1;
+    padding: 15px;
+    text-align: center;
+    height: 100px;
+    line-height: 3em;
+}

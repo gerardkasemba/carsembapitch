@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escrow</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <header class="p-3 mb-3">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                <img src="logo.png" width="100" alt="">
+            </a>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 link-dark">Home</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Shop now</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Ways to pay</a></li>
+            </ul>
+
+            <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 link-dark">Sign in</a></li>
+                    <li><a href="#" class="nav-link px-2 link-dark">Get estimate</a></li>
+                    <li><a href="#" class="btn btn-sm" style="background-color: #e76f51; color: #fff; border-color: #e76f51;">Sell you car</a></li>
+                </ul>
+                <!-- <input type="search" class="form-control" placeholder="Search..." aria-label="Search"> -->
+            </div>
+
+            <div class="dropdown text-end">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded">
+                </a>
+                <ul class="dropdown-menu text-small shadow-sm" aria-labelledby="dropdownUser1" style="border: 0;">
+                <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                <li><a class="dropdown-item" href="#">Personal Info</a></li>
+                <li><a class="dropdown-item" href="#">Password & Security</a></li>
+                <li><a class="dropdown-item" href="#">Help</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-lg-5 order-md-last">
+                <div class="row rounded p-4 shadow-sm bg-white  mb-4">
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                            car info
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 col-lg-7">
+
+                <div class="g-2 rounded p-4 shadow-sm bg-white mb-4">
+                    <h5>Basic Info</h5>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>Title</label>
+                            <input type="text" placeholder="Title" name="title" class=" form-control" value="">
+                            <p class="text-danger">
+                                <small></small>
+                            </p>
+                        </div>
+                        <div class="col-md-12 mt-3">
+                            <label for="vcondition">Vehicle Condition</label>
+                            <select class=" form-select" id="vcondition" name="vcondition">
+                                <option value="Used">Used</option>
+                                <option value="New">New</option>
+                            </select>
+                            <p class="text-danger"><small></small></p>
+                        </div>
+                        <div class="col-md-12 mt-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="utype" id="udealer" value="dealer">
+                                <label class="" for="udealer">I am a registered dealer</label>
+                            </div>
+                            <div class="form-check mt-3">
+                                <input class="form-check-input" id="useller" type="radio" name="utype" value="seller">
+                                <label class="" for="useller">I am a private seller</label>
+                                <p class="text-danger"><small></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-2 rounded p-4 shadow-sm bg-white mb-4">
+                    <h5>Price</h5>
+                    <div class="row">
+                        <div class="col-4">
+                            <select class=" form-select" name="money" aria-label="money">
+                                <option value="dollar" selected="">$</option>
+                            </select>
+                        </div>
+                        <div class="col-8">
+                            <input type="number" class=" form-control" name="amount" value="0">
+                            <p class="text-danger"><small></small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-2 rounded p-4 shadow-sm bg-white mb-4">
+                    <h5>Vehicle information</h5>
+                    <p>To make it easier for you we only need you to put in your VIN # then we'll find the car for you.</p>
+                    <div class="row">
+                        <div class="col-md-10 col-lg-10">
+                            <label for="address2" class="form-label">VIN</label>
+                            <input type="text" class=" form-control" name="vin" id="vin" placeholder="" value="">
+                            <p class="text-danger"><small></small></p>
+                        </div>
+                        <div class="col-md-2 col-lg-2">
+                            <label for="address2" class="form-label">.</label>
+                            <p><a class="btn btn-primary">Find Car</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="mileage" class="form-label">Mileage</label>
+                            <input type="number" class="is-invalid form-control" name="mileage" id="mileage" value="">
+                            <p class="text-danger"><small>Required</small></p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="driveTrain" class="form-label">Drivetrain</label>
+                            <input type="text" class=" form-control" name="driveTrain" id="driveTrain" value="">
+                            <p class="text-danger"><small></small></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="highwayMPG" class="form-label">Highway MPG</label>
+                            <input type="number" class=" form-control" name="highwayMPG" id="highwayMPG" value="0">
+                            <p class="text-danger"><small></small></p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cityMPG" class="form-label">City MPG</label>
+                            <input type="number" class=" form-control" name="cityMPG" id="cityMPG" value="0">
+                            <p class="text-danger"><small></small></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="highwayMPG" class="form-label">Highway MPG</label>
+                            <input type="number" class=" form-control" name="highwayMPG" id="highwayMPG" value="0">
+                            <p class="text-danger"><small></small></p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cityMPG" class="form-label">City MPG</label>
+                            <input type="number" class=" form-control" name="cityMPG" id="cityMPG" value="0">
+                            <p class="text-danger"><small></small></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <label for="color" class="form-label">Color</label>
+                            <input type="text" class=" form-control" name="color" id="color" aria-label="color" value="">
+                            <p class="text-danger"><small></small></p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="interiorColor" class="form-label">Interior Color</label>
+                            <input type="text" class=" form-control" name="interiorColor" id="interiorColor" aria-label="interiorColor" value="">
+                            <p class="text-danger"><small></small></p>
+                        </div>
+                    </div>
+                    <div class="border-top border-gray mt-2 pt-4">
+                        <label class="form-label text-dark" for="sc-description">Description</label>
+                        <textarea class="form-control" name="description" id="sc-description" rows="5" placeholder="Describe your vehicle"></textarea>
+                        <span class="form-text text-dark opacity-50">3000 characters left</span>
+                        <p class="text-danger"><small></small></p>
+                    </div>
+                </div>
+                <div class="g-2 rounded p-4 shadow-sm bg-white mb-4">
+                    <h5>Features</h5>
+                    <p class="text-danger"><small></small></p>
+                    <p class="text-danger"><small></small></p>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Alloy-wheels">Alloy Wheels</label>
+                            </div>
+                            <div class="form-check"><label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Sunroof-Moonroof">Sunroof / Moonroof</label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check"><label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Panoramic-roof">Panoramic roof</label></div>
+                            <div class="form-check"><label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Tinted-glass">Tinted glass</label></div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-4">
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Multi-zone-A/C">Multi-zone A/C</label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Heated-front-seats">Heated front seats</label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Premium-sound-system">Premium sound system</label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Bluetooth">Bluetooth</label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Navigation-system">Navigation system</label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Leather-seats">Leather seats</label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="USB-port">USB port</label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Leather-steering-wheel">Leather steering wheel</label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Intermittent-Wipers">Intermittent wipers</label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Memory-seat">Memory seat</label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="ApplePlay">Apple CarPlay</label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Android-Auto">Android Auto</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-4">
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" id="Airbag:driver" value="Airbag:driver">Airbag:driver</label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Airbag:passenger">Airbag:passenger</label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Adaptive-Cruise-Control">Adaptive cruise control</label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Blind-Spot-Monitor">Blind spot monitor</label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Alarm">Alarm</label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Antilock-Brakes">Antilock brakes</label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" id="brake-assist" value="Brake-Assist">Brake assist</label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Lane-Departure-Warning">Lane departure warning</label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" value="Stability-Control">Stability control</label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label"><input name="features" class="form-check-input" type="checkbox" id="fog-darks" value="Fog-darks">Fog darks</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-2 rounded p-4 shadow-sm bg-white mb-4">
+                    <div class="">
+                        <h5>Photo(s)</h5>
+                        <div class="alert alert-info" role="alert">
+                            <ul>
+                                <li>The maximum photo size is 8 MB. Formats: jpeg, jpg, png. Put the main picture first.</li>
+                            </ul>
+                        </div>
+                        <div role="button" tabindex="0" class="dropzone">
+                            <input accept="image/*,video/*,pdf" multiple="" type="file" autocomplete="off" tabindex="-1" name="files" style="display: none;">
+                            <p>Drag 'n' drop some files here, or click to select files</p>
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="g-2 rounded p-4 shadow-sm bg-white mb-4">
+                    <h5>Location</h5>
+                    <p>Please enter the location where the vehicle is located. Keep in mind that this will be the place where the client will come to pick up the car.</p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class=" form-control" name="address" id="address" value="">
+                            <p class="text-danger"><small></small></p>
+                            <input type="hidden" name="country" disabled="" value="">
+                            <input type="hidden" name="state" disabled="" value="">
+                            <input type="hidden" name="city" disabled="" value="">
+                            <input type="hidden" name="zip" disabled="" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-sm-flex justify-content-between pt-2">
+                    <!-- <a class="btn btn-outline-dark btn-lg d-block ps-3 mb-3 mb-sm-2" href="#preview-modal"  style="padding: 5px 10px; height: 40px;" data-bs-toggle="modal">
+                        <i class="fi-eye-on me-2"></i>Preview
+                    </a> -->
+                    <button type="submit" class="btn btn-primary btn-md d-block mb-2" style="padding: 5px 10px; height: 40px;">Continue</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
